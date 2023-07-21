@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background: linear-gradient(to right, rgb(77, 38, 77), rgb(41, 20, 41));
+}
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -11,31 +15,66 @@
 }
 
 .display {
-    width: 400px;
+    width: 420px;
     min-height: 120px;
     max-height: auto;
-    border: 1px solid black;
     box-sizing: border-box;
     word-wrap: break-word;
-    font-size: 3rem;
     padding: 20px;
     display: flex;
-    justify-content: right;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #202020;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.previous-equation {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.result {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .keys-grid {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(5, 100px);
-    background-color: lightgreen;
+    background-color: #0f0f0f;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .keys-grid > button {
-    border: 1px solid black; 
     font-size: 1.5rem;
+    box-sizing: border-box;
+    margin: 5px;
+    background-color: rgb(50, 50, 50);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.button-equals {
+.keys-grid > button:hover {
+    opacity: 0.7;
+}
+
+.keys-grid > button:active {
+    opacity: 0.3;
+}
+
+.keys-grid > .button-equals {
     grid-column: span 2;
+    background-color: rgba(72, 35, 72, 0.855)
+}
+
+.keys-grid > .special-button {
+    background-color: #202020;
 }
