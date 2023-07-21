@@ -11,31 +11,33 @@
 <body>
     <div class="container">
         <div class="display">
-            <div class="previous-equation">2+2=</div>
-            <div class="result">5</div>
+            <div class="previous-equation"></div>
+            <div class="equation"></div>
         </div>
         <div class="keys-grid">
-            <button class="special-button">AC</button>
-            <button class="special-button">DEL</button>
-            <button class="special-button">%</button>
-            <button class="special-button">&divide;</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="special-button">&times;</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="special-button">-</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="special-button">+</button>
-            <button class="special-button">.</button>
-            <button>0</button>
-            <button class="button-equals">=</button>
+            <button data-type="ac" class="special-button">AC</button>
+            <button data-type="del" class="special-button">DEL</button>
+            <button data-type="percent" class="special-button">%</button>
+            <button data-type="operation" class="special-button">&divide;</button>
+            <button class="number-button">1</button>
+            <button class="number-button">2</button>
+            <button class="number-button">3</button>
+            <button data-type="operation" class="special-button">&times;</button>
+            <button class="number-button">4</button>
+            <button class="number-button">5</button>
+            <button class="number-button">6</button>
+            <button data-type="operation" class="special-button">-</button>
+            <button class="number-button">7</button>
+            <button class="number-button">8</button>
+            <button class="number-button">9</button>
+            <button data-type="operation" class="special-button">+</button>
+            <button data-type="dot" class="special-button">.</button>
+            <button class="number-button">0</button>
+            <button class="equals-button">=</button>
         </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
