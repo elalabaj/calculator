@@ -1,0 +1,41 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.display {
+    width: 400px;
+    min-height: 120px;
+    max-height: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-size: 3rem;
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.keys-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+    background-color: lightgreen;
+}
+
+.keys-grid > button {
+    border: 1px solid black; 
+    font-size: 1.5rem;
+}
+
+.button-equals {
+    grid-column: span 2;
+}
