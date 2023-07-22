@@ -19,15 +19,15 @@ let toReset = false;
 let errorMessageDisplayed = false;
 
 function clearEquation() {
+    if (toReset) {
+        toReset = false;
+        previousEquationField.innerHTML += currentExpression;
+    }
+    if (errorMessageDisplayed) errorMessageDisplayed = false;
+
     equationField.innerHTML = '';
     equation = [];
     currentExpression = "";
-
-    console.log(equation);
-    console.log(currentExpression)
-
-    if (toReset) toReset = false;
-    if (errorMessageDisplayed) errorMessageDisplayed = false;
 }
 
 function deleteLastFromEquation() {

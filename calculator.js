@@ -1,7 +1,4 @@
 export function calculate(equation) {
-    console.log("asdfasdf");
-    console.log(equation);
-    console.log(equation.length);
     if (equation.length == 0) return 0;
     if (equation.length == 1) return parseFloat(equation[0]);
     if (equation.length == 2) return parseFloat(equation[0]) * 0.01;
