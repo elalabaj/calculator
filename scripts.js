@@ -140,3 +140,15 @@ delButton.addEventListener('click', deleteLastFromEquation);
 dotButton.addEventListener('click', addDotToEquation);
 percentButton.addEventListener('click', addPercentToEquation);
 equalsButton.addEventListener('click', calculateEquation);
+
+document.addEventListener('keydown', e => {
+    if (!isNaN(parseInt(e.key))) addNumberToEquation(e.key);
+    else if (e.key == '/') addOperationToEquation('/');
+    else if (e.key == '*') addOperationToEquation('*');
+    else if (e.key == '-') addOperationToEquation('-');
+    else if (e.key == '+') addOperationToEquation('+');
+    else if (e.key == '%') addPercentToEquation();
+    else if (e.key == ',' || e.key == '.') addDotToEquation();
+    else if (e.key == 'Backspace' || e.key == 'Delete') deleteLastFromEquation();
+    else if (e.key == 'Enter' || e.key == '=') calculateEquation();
+});
